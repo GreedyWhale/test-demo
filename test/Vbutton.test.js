@@ -56,7 +56,7 @@ describe('VButton 组件测试', function () {
   })
   it('VButton 组件可以响应点击事件', function () {
     const vm = new Constructor({}).$mount()
-    const callback = sinon.fake();
+    const callback = sinon.spy();
     vm.$on('click', callback)
     vm.$el.click()
     expect(callback).to.have.been.called
